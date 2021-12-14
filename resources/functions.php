@@ -61,4 +61,28 @@
             echo $product;
         }
     }
+
+    function get_category_products($id) {
+        $query = "SELECT * FROM products WHERE product_category_id = " . escape($id);
+        $result = query($query);
+        confirm($result);
+        while($row = fetch_array($result)) {
+            $product = <<<DELIMETER
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="{$row['product_image']}" alt="">
+                        <div class="caption">
+                            <h3>{$row['product_title']}</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Add to cart</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            DELIMETER;
+
+            echo $product;
+        }
+    }
 ?>
