@@ -1,6 +1,10 @@
 <p class="lead">Shop Name</p>
 <div class="list-group">
-    <a href="category.html" class="list-group-item">Category 1</a>
-    <a href="#" class="list-group-item">Category 2</a>
-    <a href="#" class="list-group-item">Category 3</a>
+    <?php
+        $sql = "SELECT * FROM categories";
+        $result = query($sql);
+        while ($row = fetch_array($result)) {
+            echo '<a href="" class="list-group-item">'. $row['cat_title'] .'</a>';
+        }
+    ?>
 </div>
