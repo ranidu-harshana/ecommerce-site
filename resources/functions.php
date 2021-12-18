@@ -98,6 +98,7 @@
         }
     }
 
+<<<<<<< HEAD
     function login_user() {
         if(isset($_POST['submit'])) {
             $username = escape($_POST['username']);
@@ -116,3 +117,7 @@
         }
     }
 ?>
+=======
+new ksdjhsdfjshbf
+?>
+>>>>>>> 7beb8ba39dfd592bf7c4b14993308f6de1543c3b
