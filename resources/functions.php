@@ -116,10 +116,5 @@
         }
     }
 
-function new() {
-    return "";
-    }
-?>
-
 
 ?>
